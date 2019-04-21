@@ -24,7 +24,7 @@ public class MoviesCreateTable {
                     new ProvisionedThroughput(10L, 10L));
 
             table.waitForActive();
-            System.out.println("Success. Table status: " + table.getDescription().getTableStatus());
+            System.out.printf("Success. Table status: %s\n" , table.getDescription().getTableStatus());
         } catch (Exception e) {
             System.err.println("Unable to create table:");
             System.err.println(e.getMessage());
